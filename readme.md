@@ -17,11 +17,11 @@
 
 2. @CacheTarget 注解
 
-> @CacheTarget 是用于定义目标的缓存类，便于在清除缓存时可以随时在别处进行清除
+> @CacheTarget 是用于定义目标的缓存类，便于在清除缓存时可以随时在别处进行清除; 比如你可以在 service 层清楚，controller定义的缓存
 
 3. 兼容所有的 spring-cache 功能
 
-4. 缓存使用示例
+4. 缓存使用示例 (一定要看)
 
 https://github.com/zhengyin/spring-boot-example/blob/master/spring-boot-example-cache/src/test/java/com/izhengyin/springboot/example/cache/test/ApplicationTests.java
 
