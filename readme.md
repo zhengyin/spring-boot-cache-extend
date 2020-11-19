@@ -8,10 +8,10 @@
 1.添加maven依赖 
 
 ``` 
-    <dependency>
-        <groupId>com.kongfz.util</groupId>
-        <artifactId>kfz-cache-spring-boot-starter</artifactId>
-        <version>2.0.0.0</version>
+   <dependency>
+        <groupId>com.izhengyin</groupId>
+        <artifactId>spring-boot-cache-extend</artifactId>
+        <version>0.1.0</version>
     </dependency>
 ```
 
