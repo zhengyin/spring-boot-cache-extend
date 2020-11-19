@@ -7,6 +7,8 @@
 
 1.添加maven依赖 
 
+ mvn install
+
 ``` 
    <dependency>
         <groupId>com.izhengyin</groupId>
@@ -87,7 +89,21 @@ public class CacheName {
 
 3. @CacheTarget 注解
 
-> @CacheTarget 是用于定义目标的缓存类，便于在清除缓存时可以随时在别处进行清除; 比如你可以在 service 层清楚，controller定义的缓存
+> @CacheTarget 是用于定义目标的缓存类，便于在清除缓存时可以随时在别处进行清除; 比如你可以在 service 层清除controller定义的缓存
+
+``` 
+Controller ...
+    @Cacheable(cacheNames = {CacheName.Redis.TTL_5} , keyGenerator = GeneratorName.DEFAULT , cacheManager = CacheDrive.REDIS)
+    @GetMapping("/hello/{name}")
+    public Object hello(@PathVariable String name){
+        return "Hello "+name+" , I am "+application +" , time "+System.currentTimeMillis();
+    }
+Service ...
+    @CacheTarget(TestController.class)
+    @CacheEvict(cacheNames = CacheName.Redis.TTL_5 , keyGenerator = GeneratorName.DEFAULT , cacheManager = CacheDrive.REDIS)
+    public void hello(String name){}
+```
+
 
 4. 兼容所有的 spring-cache 功能
 
