@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  * @author zhengyin  zhengyinit@outlook.com
  * @date Created on 2019-11-08 14:23
  */
-public class CaffeineConfig {
+public class CaffeineCacheTtlConfig {
     public static List<CaffeineCache> getCacheNameConfigs(){
         CaffeineCache TTL_1 = new CaffeineCache(CacheName.Caffeine.TTL_1,
                 Caffeine.newBuilder().
