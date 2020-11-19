@@ -18,7 +18,7 @@
 2. 配置Redis
 
 ``` 
-redis.cache.host = 192.168.100.144
+redis.cache.host = 127.0.0.1
 redis.cache.port = 6379
 redis.cache.database = 0
 redis.cache.timeout = 1000ms
